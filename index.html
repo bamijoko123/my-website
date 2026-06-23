@@ -8,304 +8,285 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* =======================
-   GLOBAL STYLE (ELITE)
-======================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: radial-gradient(circle at top, #0B1220, #070A12);
-    color: white;
-    overflow-x: hidden;
-}
 
 /* =======================
-   NAVBAR (FRAMER STYLE)
+   GLOBAL
 ======================= */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 60px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(11, 18, 32, 0.7);
-    backdrop-filter: blur(12px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
 }
 
-.logo {
-    font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 1px;
+html{
+scroll-behavior:smooth;
 }
 
-nav ul {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #A1A1AA;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: white;
-}
-
-.btn {
-    background: linear-gradient(135deg, #3B82F6, #2563EB);
-    padding: 10px 18px;
-    border-radius: 12px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(59,130,246,0.3);
+body{
+background:#070A12;
+color:#fff;
+overflow-x:hidden;
 }
 
 /* =======================
-   HERO (APPLE STYLE)
+   BACKGROUND GLOW
 ======================= */
-.hero {
-    text-align: center;
-    padding: 180px 20px 100px;
+body::before{
+content:"";
+position:fixed;
+top:-200px;
+left:-200px;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#3B82F6,transparent 60%);
+filter:blur(120px);
+z-index:-1;
+opacity:0.3;
 }
 
-.hero h1 {
-    font-size: 64px;
-    font-weight: 800;
-    letter-spacing: -2px;
+/* =======================
+   NAVBAR (GLASS)
+======================= */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:rgba(10,15,30,0.6);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+z-index:1000;
 }
 
-.hero span {
-    background: linear-gradient(90deg, #3B82F6, #60A5FA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.logo{
+font-weight:800;
+font-size:20px;
 }
 
-.hero p {
-    margin-top: 20px;
-    color: #A1A1AA;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 16px;
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#A1A1AA;
+font-size:14px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#fff;
+}
+
+.btn{
+background:linear-gradient(135deg,#3B82F6,#2563EB);
+padding:10px 18px;
+border-radius:12px;
+text-decoration:none;
+color:#fff;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 30px rgba(59,130,246,0.3);
+}
+
+/* =======================
+   HERO
+======================= */
+.hero{
+text-align:center;
+padding:180px 20px 100px;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:800;
+letter-spacing:-2px;
+}
+
+.hero span{
+background:linear-gradient(90deg,#3B82F6,#60A5FA);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:20px;
+color:#A1A1AA;
+max-width:750px;
+margin:auto;
 }
 
 /* =======================
    SECTIONS
 ======================= */
-section {
-    padding: 100px 70px;
+section{
+padding:100px 70px;
 }
 
 /* =======================
    STATS
 ======================= */
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.stats{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.stat-box {
-    background: rgba(17, 26, 46, 0.8);
-    padding: 28px;
-    border-radius: 16px;
-    min-width: 180px;
-    text-align: center;
-    transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.05);
+.stat{
+background:rgba(17,26,46,0.7);
+padding:30px;
+border-radius:16px;
+text-align:center;
+min-width:180px;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.3s;
 }
 
-.stat-box:hover {
-    transform: translateY(-6px);
-}
-
-.stat-box h2 {
-    color: #3B82F6;
-    font-size: 28px;
+.stat:hover{
+transform:translateY(-8px);
 }
 
 /* =======================
    SERVICES
 ======================= */
-.services {
-    text-align: center;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+.card{
+background:rgba(17,26,46,0.7);
+padding:28px;
+border-radius:16px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
 }
 
-.card {
-    background: rgba(17, 26, 46, 0.7);
-    padding: 28px;
-    border-radius: 16px;
-    transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.05);
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 25px 60px rgba(59,130,246,0.15);
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 25px 60px rgba(59,130,246,0.15);
 }
 
 /* =======================
-   WORK (CASE STUDIES)
+   CASE STUDIES
 ======================= */
-.work-container {
-    text-align: center;
+.project{
+background:rgba(17,26,46,0.7);
+border-radius:18px;
+overflow:hidden;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
+cursor:pointer;
 }
 
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 50px;
+.project:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 30px 80px rgba(0,0,0,0.5);
 }
 
-.work-card {
-    background: rgba(17, 26, 46, 0.7);
-    border-radius: 18px;
-    overflow: hidden;
-    transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.work-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
-}
-
-.work-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.work-card h3 {
-    padding: 18px;
+.project img{
+width:100%;
+height:200px;
+object-fit:cover;
 }
 
 /* =======================
-   PRICING (ELITE LOOK)
+   PRICING
 ======================= */
-.pricing {
-    text-align: center;
+.price-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
-.price-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+.price{
+background:rgba(17,26,46,0.7);
+padding:35px;
+border-radius:18px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
 }
 
-.price-card {
-    background: rgba(17, 26, 46, 0.7);
-    padding: 35px;
-    border-radius: 18px;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: 0.3s;
+.price:hover{
+transform:translateY(-10px);
 }
 
-.price-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 70px rgba(59,130,246,0.15);
+.highlight{
+border:1px solid #3B82F6;
+box-shadow:0 0 40px rgba(59,130,246,0.2);
 }
 
-.price {
-    font-size: 34px;
-    color: #3B82F6;
-    margin: 15px 0;
+.amount{
+font-size:32px;
+color:#3B82F6;
+margin:10px 0;
 }
 
 /* =======================
-   CONTACT
+   WHATSAPP FLOAT
 ======================= */
-.contact {
-    text-align: center;
-}
-
-.whatsapp {
-    display: inline-block;
-    margin-top: 20px;
-    background: #25D366;
-    padding: 14px 20px;
-    border-radius: 14px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:14px 16px;
+border-radius:50px;
+font-weight:600;
+color:#fff;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* =======================
-   FADE IN ANIMATION
+   FADE IN
 ======================= */
-.fade {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeIn 1s ease forwards;
+.fade{
+opacity:0;
+transform:translateY(40px);
+animation:fade 1s forwards;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes fade{
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 /* =======================
    FOOTER
 ======================= */
-footer {
-    text-align: center;
-    padding: 50px;
-    color: #A1A1AA;
-    border-top: 1px solid rgba(255,255,255,0.05);
+footer{
+text-align:center;
+padding:50px;
+color:#A1A1AA;
+border-top:1px solid rgba(255,255,255,0.05);
 }
 
 /* =======================
-   MOBILE (PERFECT)
+   MOBILE
 ======================= */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    section {
-        padding: 80px 20px;
-    }
+@media(max-width:768px){
+nav ul{display:none;}
+.hero h1{font-size:38px;}
+section{padding:80px 20px;}
 }
+
 </style>
 </head>
 
@@ -313,110 +294,112 @@ footer {
 
 <!-- NAV -->
 <nav>
-    <div class="logo">BAMIJOKO AGENCY</div>
+<div class="logo">BAMIJOKO AGENCY</div>
 
-    <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-    <a class="btn" href="#contact">Get Quote</a>
+<a class="btn" href="#contact">Get Quote</a>
 </nav>
 
 <!-- HERO -->
 <section id="hero" class="hero fade">
-    <h1>We Build <span>High-Converting Websites</span><br>That Grow Businesses</h1>
-    <p>BAMIJOKO Agency designs premium digital experiences that convert visitors into paying customers.</p>
+<h1>We Build <span>Elite Websites</span><br>That Convert</h1>
+<p>Premium web design & development for modern businesses that want to scale fast.</p>
 </section>
 
 <!-- STATS -->
-<section class="fade">
-    <div class="stats">
-        <div class="stat-box"><h2>120+</h2><p>Projects</p></div>
-        <div class="stat-box"><h2>85+</h2><p>Clients</p></div>
-        <div class="stat-box"><h2>98%</h2><p>Success</p></div>
-        <div class="stat-box"><h2>5+</h2><p>Years</p></div>
-    </div>
+<section>
+<div class="stats">
+<div class="stat"><h2>120+</h2><p>Projects</p></div>
+<div class="stat"><h2>85+</h2><p>Clients</p></div>
+<div class="stat"><h2>98%</h2><p>Success</p></div>
+<div class="stat"><h2>5+</h2><p>Years</p></div>
+</div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="services fade">
-    <h2>Services</h2>
+<section id="services">
+<h2>Services</h2>
 
-    <div class="service-grid">
-        <div class="card">Web Design</div>
-        <div class="card">Web Development</div>
-        <div class="card">E-Commerce</div>
-        <div class="card">SEO Growth</div>
-    </div>
+<div class="grid">
+<div class="card">Web Design</div>
+<div class="card">Web Development</div>
+<div class="card">E-Commerce</div>
+<div class="card">SEO Growth</div>
+</div>
 </section>
 
 <!-- WORK -->
-<section id="work" class="work-container fade">
-    <h2>Case Studies</h2>
+<section id="work">
+<h2>Case Studies</h2>
 
-    <div class="work-grid">
+<div class="grid">
 
-        <div class="work-card">
-            <img src="Hunter.jpg">
-            <h3>Corporate Website</h3>
-        </div>
+<div class="project">
+<img src="Hunter.jpg">
+<h3>Corporate Website</h3>
+</div>
 
-        <div class="work-card">
-            <img src="Adewale.jpg">
-            <h3>E-Commerce Website</h3>
-        </div>
+<div class="project">
+<img src="Adewale.jpg">
+<h3>E-Commerce Store</h3>
+</div>
 
-        <div class="work-card">
-            <img src="Sunday.jpg">
-            <h3>Portfolio Website</h3>
-        </div>
+<div class="project">
+<img src="Sunday.jpg">
+<h3>Portfolio Site</h3>
+</div>
 
-    </div>
+</div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="pricing fade">
-    <h2>Pricing</h2>
+<section id="pricing">
+<h2>Pricing</h2>
 
-    <div class="price-grid">
-        <div class="price-card">
-            <h3>Starter</h3>
-            <div class="price">$99</div>
-            <p>Basic website</p>
-        </div>
+<div class="price-grid">
 
-        <div class="price-card">
-            <h3>Business</h3>
-            <div class="price">$299</div>
-            <p>Full business website</p>
-        </div>
+<div class="price">
+<h3>Starter</h3>
+<div class="amount">$99</div>
+<p>Basic website</p>
+</div>
 
-        <div class="price-card">
-            <h3>Premium</h3>
-            <div class="price">$599</div>
-            <p>Full branding + website</p>
-        </div>
-    </div>
+<div class="price highlight">
+<h3>Business</h3>
+<div class="amount">$299</div>
+<p>Most Popular</p>
+</div>
+
+<div class="price">
+<h3>Premium</h3>
+<div class="amount">$599</div>
+<p>Full branding + website</p>
+</div>
+
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact fade">
-    <h2>Contact Us</h2>
-
-    <p>Email: Sundaybamijokoadewale@gmail.com</p>
-
-    <a class="whatsapp" href="https://wa.me/2349047939243" target="_blank">
-        Chat on WhatsApp
-    </a>
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: Sundaybamijokoadewale@gmail.com</p>
 </section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp-float" href="https://wa.me/2349047939243">
+WhatsApp
+</a>
 
 <!-- FOOTER -->
 <footer>
-    © 2026 BAMIJOKO Agency — Built at Elite Level
+© 2026 BAMIJOKO Agency — Final Boss Edition
 </footer>
 
 </body>
