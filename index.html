@@ -3,186 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bamijoko | Web Designer & Developer</title>
+<title>Bamijoko | Premium Web Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:#0f172a;
-color:white;
+font-family:'Inter', sans-serif;
+background:#0b1220;
+color:#e5e7eb;
 }
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
-background:#111827;
+padding:20px 60px;
+background:rgba(17,24,39,0.8);
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
 }
 
 nav a{
-color:white;
+color:#cbd5e1;
 text-decoration:none;
-margin-left:15px;
+margin-left:20px;
+font-weight:500;
 }
 
 .hero{
+padding:140px 20px;
 text-align:center;
-padding:120px 20px;
-background:linear-gradient(135deg,#1e3a8a,#0f172a);
+background:radial-gradient(circle at top,#1e3a8a,#0b1220);
 }
 
 .hero h1{
-font-size:3rem;
-margin-bottom:10px;
+font-size:3.5rem;
+margin-bottom:15px;
+font-weight:700;
 }
 
 .hero p{
 font-size:1.2rem;
-color:#cbd5e1;
+color:#94a3b8;
+max-width:600px;
+margin:auto;
 }
 
-.btn{
+.cta{
+margin-top:25px;
 display:inline-block;
-margin-top:20px;
-padding:14px 25px;
-background:#25D366;
+padding:15px 28px;
+background:#22c55e;
 color:white;
+border-radius:10px;
 text-decoration:none;
-border-radius:8px;
-font-weight:bold;
+font-weight:600;
+transition:0.3s;
+}
+
+.cta:hover{
+transform:scale(1.05);
 }
 
 section{
-padding:70px 20px;
-max-width:1000px;
+padding:90px 20px;
+max-width:1100px;
 margin:auto;
 }
 
 h2{
 text-align:center;
+font-size:2rem;
+margin-bottom:40px;
 color:#60a5fa;
-margin-bottom:30px;
 }
 
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
+/* CARDS */
 .card{
-background:#1f2937;
-padding:20px;
-border-radius:12px;
-transition:0.3s;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+padding:25px;
+border-radius:15px;
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-10px);
+border-color:#3b82f6;
 }
 
+/* STATS */
+.stats{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h3{
+font-size:2rem;
+color:#22c55e;
+}
+
+/* CONTACT */
 .contact{
 text-align:center;
 }
 
+.whatsapp{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#25D366;
+color:white;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+}
+
 footer{
 text-align:center;
-padding:20px;
-background:#111827;
-margin-top:40px;
+padding:30px;
+background:#0f172a;
+margin-top:50px;
+color:#64748b;
 }
 </style>
 </head>
 <body>
 <nav>
-<h3>Bamijoko</h3>
+<h3>Bamijoko Agency</h3>
 <div>
-<a href="#about">About</a>
 <a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#pricing">Pricing</a>
+<a href="#portfolio">Work</a>
+<a href="#process">Process</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 <div class="hero">
-<h1>Hi, I'm Bamijoko 👋</h1>
-<p>I build modern websites that help businesses grow online</p>
-<a class="btn" href="https://wa.me/2349047939243" target="_blank">
-Chat on WhatsApp
-</a>
+<h1>We Build High-Converting Websites That Make You Money</h1>
+<p>Modern, fast, and premium websites designed to turn visitors into paying customers.</p>
+Start Your Project
 </div>
-<section id="about">
-<h2>About Me</h2>
-<p style="text-align:center;color:#cbd5e1;line-height:1.7;">
-I am a web designer and developer focused on creating modern, responsive websites
-that help businesses attract customers and grow online.
-</p>
-</section>
 <section id="services">
 <h2>Services</h2>
 <div class="grid">
 <div class="card">
 <h3>Business Websites</h3>
-<p>Professional websites for companies and brands.</p>
+<p>Premium websites for companies that want to grow online.</p>
 </div>
 <div class="card">
 <h3>Landing Pages</h3>
-<p>High-converting pages for marketing and sales.</p>
+<p>High-conversion pages designed to increase sales.</p>
 </div>
 <div class="card">
-<h3>Portfolio Websites</h3>
-<p>Clean personal websites for freelancers.</p>
+<h3>Brand Design</h3>
+<p>Clean modern branding for professional businesses.</p>
 </div>
 </div>
 </section>
 <section id="portfolio">
-<h2>Portfolio</h2>
+<h2>Our Work</h2>
 <div class="grid">
 <div class="card">
 <img src="a_high_resolution_dark_themed_website_homepage_moc.png"
-style="width:100%;border-radius:10px;margin-bottom:10px;">
-<h3>Modern Business Website</h3>
-<p>Premium website design built for a client project.</p>
+style="width:100%;border-radius:10px;">
+<h3>Business Website</h3>
+<p>Modern corporate website design.</p>
 </div>
 <div class="card">
 <h3>E-commerce Landing Page</h3>
-<p>High-converting landing page designed for sales and product promotion.</p>
+<p>High-converting sales landing page.</p>
 </div>
 <div class="card">
-<h3>Personal Portfolio</h3>
-<p>Clean and modern portfolio website for a freelancer.</p>
+<h3>Portfolio Website</h3>
+<p>Minimalist freelancer portfolio.</p>
 </div>
 </div>
 </section>
-<section id="pricing">
-<h2>Pricing</h2>
+<section id="process">
+<h2>How We Work</h2>
 <div class="grid">
 <div class="card">
-<h3>Starter</h3>
-<p>$50 - Simple 1-page website</p>
+<h3>1. Strategy</h3>
+<p>We understand your business goals.</p>
 </div>
 <div class="card">
-<h3>Pro</h3>
-<p>$120 - Business website (3–5 pages)</p>
+<h3>2. Design</h3>
+<p>We create a modern high-end layout.</p>
 </div>
 <div class="card">
-<h3>Premium</h3>
-<p>$250 - Full custom website</p>
+<h3>3. Launch</h3>
+<p>Your website goes live and starts converting.</p>
 </div>
 </div>
 </section>
 <section id="contact" class="contact">
-<h2>Contact Me</h2>
-<p>Email: sundaybamijokoadewale@gmail.com</p>
-<a class="btn" href="https://wa.me/2349047939243" target="_blank">
-Send WhatsApp Message
+<h2>Let’s Build Your Website</h2>
+<p>Contact us today and grow your business online.</p>
+<a class="whatsapp" href="https://wa.me/2349047939243">
+Chat on WhatsApp
 </a>
 </section>
 <footer>
-© 2026 Bamijoko. All Rights Reserved.
+© 2026 Bamijoko Agency. All Rights Reserved.
 </footer>
 </body>
 </html>
