@@ -8,7 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* RESET */
+/* =======================
+   GLOBAL STYLE (ELITE)
+======================= */
 * {
     margin: 0;
     padding: 0;
@@ -21,21 +23,24 @@ html {
 }
 
 body {
-    background: #0B1220;
+    background: radial-gradient(circle at top, #0B1220, #070A12);
     color: white;
-    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* NAVBAR (CLEAN + STRIPE STYLE) */
+/* =======================
+   NAVBAR (FRAMER STYLE)
+======================= */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 70px;
-    position: sticky;
+    padding: 18px 60px;
+    position: fixed;
+    width: 100%;
     top: 0;
-    background: rgba(11, 18, 32, 0.9);
-    backdrop-filter: blur(10px);
+    background: rgba(11, 18, 32, 0.7);
+    backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
@@ -63,11 +68,10 @@ nav ul li a:hover {
     color: white;
 }
 
-/* BUTTON */
 .btn {
-    background: #3B82F6;
-    padding: 10px 16px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+    padding: 10px 18px;
+    border-radius: 12px;
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -76,53 +80,48 @@ nav ul li a:hover {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(59,130,246,0.3);
+    box-shadow: 0 10px 30px rgba(59,130,246,0.3);
 }
 
-/* HERO */
+/* =======================
+   HERO (APPLE STYLE)
+======================= */
 .hero {
     text-align: center;
-    padding: 140px 20px 90px;
+    padding: 180px 20px 100px;
 }
 
 .hero h1 {
-    font-size: 58px;
+    font-size: 64px;
     font-weight: 800;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
 }
 
 .hero span {
-    color: #3B82F6;
+    background: linear-gradient(90deg, #3B82F6, #60A5FA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
     margin-top: 20px;
     color: #A1A1AA;
-    max-width: 700px;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
 }
 
-/* FADE ANIMATION */
-.fade {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* SECTIONS */
+/* =======================
+   SECTIONS
+======================= */
 section {
-    padding: 90px 70px;
+    padding: 100px 70px;
 }
 
-/* STATS */
+/* =======================
+   STATS
+======================= */
 .stats {
     display: flex;
     justify-content: center;
@@ -131,24 +130,27 @@ section {
 }
 
 .stat-box {
-    background: #111A2E;
-    padding: 25px;
-    border-radius: 14px;
+    background: rgba(17, 26, 46, 0.8);
+    padding: 28px;
+    border-radius: 16px;
     min-width: 180px;
     text-align: center;
     transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .stat-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transform: translateY(-6px);
 }
 
 .stat-box h2 {
     color: #3B82F6;
+    font-size: 28px;
 }
 
-/* SERVICES */
+/* =======================
+   SERVICES
+======================= */
 .services {
     text-align: center;
 }
@@ -156,24 +158,27 @@ section {
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 25px;
     margin-top: 40px;
 }
 
 .card {
-    background: #111A2E;
-    padding: 25px;
-    border-radius: 14px;
+    background: rgba(17, 26, 46, 0.7);
+    padding: 28px;
+    border-radius: 16px;
     transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
     cursor: pointer;
 }
 
 .card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(59,130,246,0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(59,130,246,0.15);
 }
 
-/* WORK (CASE STUDIES) */
+/* =======================
+   WORK (CASE STUDIES)
+======================= */
 .work-container {
     text-align: center;
 }
@@ -182,33 +187,35 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .work-card {
-    background: #111A2E;
-    border-radius: 14px;
+    background: rgba(17, 26, 46, 0.7);
+    border-radius: 18px;
     overflow: hidden;
     transition: 0.3s;
-    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .work-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
 }
 
 .work-card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
 }
 
 .work-card h3 {
-    padding: 15px;
+    padding: 18px;
 }
 
-/* PRICING */
+/* =======================
+   PRICING (ELITE LOOK)
+======================= */
 .pricing {
     text-align: center;
 }
@@ -221,24 +228,27 @@ section {
 }
 
 .price-card {
-    background: #111A2E;
-    padding: 30px;
-    border-radius: 14px;
+    background: rgba(17, 26, 46, 0.7);
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.05);
     transition: 0.3s;
 }
 
 .price-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(59,130,246,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 30px 70px rgba(59,130,246,0.15);
 }
 
 .price {
-    font-size: 30px;
+    font-size: 34px;
     color: #3B82F6;
     margin: 15px 0;
 }
 
-/* CONTACT */
+/* =======================
+   CONTACT
+======================= */
 .contact {
     text-align: center;
 }
@@ -247,37 +257,53 @@ section {
     display: inline-block;
     margin-top: 20px;
     background: #25D366;
-    padding: 12px 18px;
-    border-radius: 10px;
+    padding: 14px 20px;
+    border-radius: 14px;
     color: white;
     text-decoration: none;
     font-weight: 600;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #A1A1AA;
-    border-top: 1px solid #1F2937;
+/* =======================
+   FADE IN ANIMATION
+======================= */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeIn 1s ease forwards;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    nav {
-        padding: 20px;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    section {
-        padding: 70px 20px;
+/* =======================
+   FOOTER
+======================= */
+footer {
+    text-align: center;
+    padding: 50px;
+    color: #A1A1AA;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* =======================
+   MOBILE (PERFECT)
+======================= */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 38px;
     }
 
-    nav ul {
-        display: none;
+    section {
+        padding: 80px 20px;
     }
 }
 </style>
@@ -302,8 +328,8 @@ footer {
 
 <!-- HERO -->
 <section id="hero" class="hero fade">
-    <h1>We Build <span>Powerful Websites</span><br>That Grow Businesses</h1>
-    <p>BAMIJOKO Agency creates high-converting websites, designed with strategy, speed, and modern UI/UX principles.</p>
+    <h1>We Build <span>High-Converting Websites</span><br>That Grow Businesses</h1>
+    <p>BAMIJOKO Agency designs premium digital experiences that convert visitors into paying customers.</p>
 </section>
 
 <!-- STATS -->
@@ -333,6 +359,7 @@ footer {
     <h2>Case Studies</h2>
 
     <div class="work-grid">
+
         <div class="work-card">
             <img src="Hunter.jpg">
             <h3>Corporate Website</h3>
@@ -340,13 +367,14 @@ footer {
 
         <div class="work-card">
             <img src="Adewale.jpg">
-            <h3>E-Commerce Store</h3>
+            <h3>E-Commerce Website</h3>
         </div>
 
         <div class="work-card">
             <img src="Sunday.jpg">
             <h3>Portfolio Website</h3>
         </div>
+
     </div>
 </section>
 
@@ -358,7 +386,7 @@ footer {
         <div class="price-card">
             <h3>Starter</h3>
             <div class="price">$99</div>
-            <p>Basic website design</p>
+            <p>Basic website</p>
         </div>
 
         <div class="price-card">
@@ -388,7 +416,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-    © 2026 BAMIJOKO Agency
+    © 2026 BAMIJOKO Agency — Built at Elite Level
 </footer>
 
 </body>
