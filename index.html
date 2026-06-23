@@ -1,59 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Contact</title>
-
-  <style>
-    body {
-      font-family: Arial;
-      background: #111;
-      color: white;
-      text-align: center;
-      margin: 0;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bamijoko | Web Designer & Developer</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
     }
 
-    nav {
-      background: #222;
-      padding: 15px;
+    body{
+        line-height:1.6;
+        color:#333;
     }
 
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
+    header{
+        background:#111;
+        color:white;
+        padding:20px 50px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
     }
 
-    input, textarea {
-      padding: 10px;
-      width: 200px;
-      margin: 5px;
+    nav a{
+        color:white;
+        text-decoration:none;
+        margin-left:20px;
     }
 
-    button {
-      padding: 10px 20px;
-      background: orange;
-      border: none;
-      cursor: pointer;
+    .hero{
+        background:linear-gradient(135deg,#0f172a,#2563eb);
+        color:white;
+        text-align:center;
+        padding:100px 20px;
     }
-  </style>
 
+    .hero h1{
+        font-size:3rem;
+        margin-bottom:15px;
+    }
+
+    .hero p{
+        font-size:1.2rem;
+        margin-bottom:25px;
+    }
+
+    .btn{
+        display:inline-block;
+        background:white;
+        color:#2563eb;
+        padding:12px 25px;
+        border-radius:5px;
+        text-decoration:none;
+        font-weight:bold;
+    }
+
+    section{
+        padding:70px 20px;
+        max-width:1000px;
+        margin:auto;
+    }
+
+    h2{
+        text-align:center;
+        margin-bottom:30px;
+    }
+
+    .services{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:20px;
+    }
+
+    .card{
+        padding:25px;
+        border:1px solid #ddd;
+        border-radius:10px;
+        text-align:center;
+    }
+
+    .contact{
+        text-align:center;
+    }
+
+    footer{
+        background:#111;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+</style>
 </head>
-
 <body>
+<header>
+    <h2>Bamijoko</h2>
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+</header>
+<section class="hero">
+    <h1>Professional Website Designer & Developer</h1>
+<p>
+    I create modern, responsive, and professional websites
+    for businesses, entrepreneurs, and individuals.
+</p>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<a href="#contact" class="btn">Hire Me</a>
+</section>
+<section id="about">
+    <h2>About Me</h2>
+<p>
+    Hello, I'm Bamijoko. I help businesses and individuals
+    build beautiful, mobile-friendly websites that attract customers
+    and grow their online presence. My goal is to create websites
+    that look professional and deliver results.
+</p>
+</section>
+<section id="services">
+    <h2>My Services</h2>
+<div class="services">
 
-  <h1>Contact Me</h1>
+    <div class="card">
+        <h3>Business Websites</h3>
+        <p>Professional websites for companies, brands, and local businesses.</p>
+    </div>
 
-  <input type="text" placeholder="Your Name"><br>
-  <input type="email" placeholder="Your Email"><br>
-  <textarea placeholder="Message"></textarea><br>
+    <div class="card">
+        <h3>Landing Pages</h3>
+        <p>High-converting landing pages for products and services.</p>
+    </div>
 
-  <button onclick="alert('Message sent!')">Send</button>
+    <div class="card">
+        <h3>Portfolio Websites</h3>
+        <p>Personal portfolio websites for professionals and freelancers.</p>
+    </div>
 
+    <div class="card">
+        <h3>Website Maintenance</h3>
+        <p>Updates, improvements, and ongoing support for your website.</p>
+    </div>
+
+</div>
+</section>
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+<p>Let's work together on your next project.</p>
+
+<br>
+
+<p>Email:sundaybamijokoadewale@email.com</p>
+<p>WhatsApp: +234 904 793 9243</p>
+</section>
+<footer>
+    <p>© 2026 Bamijoko. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
