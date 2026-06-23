@@ -1,166 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bamijoko | Web Designer & Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bamijoko | Web Designer & Developer</title>
 <style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:Arial, sans-serif;
-    }
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0f172a;
+color:white;
+}
 
-    body{
-        line-height:1.6;
-        color:#333;
-    }
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#111827;
+position:sticky;
+top:0;
+}
 
-    header{
-        background:#111;
-        color:white;
-        padding:20px 50px;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-    }
+nav a{
+color:white;
+text-decoration:none;
+margin-left:15px;
+}
 
-    nav a{
-        color:white;
-        text-decoration:none;
-        margin-left:20px;
-    }
+.hero{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(135deg,#1e3a8a,#0f172a);
+}
 
-    .hero{
-        background:linear-gradient(135deg,#0f172a,#2563eb);
-        color:white;
-        text-align:center;
-        padding:100px 20px;
-    }
+.hero h1{
+font-size:3rem;
+margin-bottom:10px;
+}
 
-    .hero h1{
-        font-size:3rem;
-        margin-bottom:15px;
-    }
+.hero p{
+font-size:1.2rem;
+color:#cbd5e1;
+}
 
-    .hero p{
-        font-size:1.2rem;
-        margin-bottom:25px;
-    }
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 25px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
 
-    .btn{
-        display:inline-block;
-        background:white;
-        color:#2563eb;
-        padding:12px 25px;
-        border-radius:5px;
-        text-decoration:none;
-        font-weight:bold;
-    }
+section{
+padding:70px 20px;
+max-width:1000px;
+margin:auto;
+}
 
-    section{
-        padding:70px 20px;
-        max-width:1000px;
-        margin:auto;
-    }
+h2{
+text-align:center;
+color:#60a5fa;
+margin-bottom:30px;
+}
 
-    h2{
-        text-align:center;
-        margin-bottom:30px;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
 
-    .services{
-        display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-        gap:20px;
-    }
+.card{
+background:#1f2937;
+padding:20px;
+border-radius:12px;
+transition:0.3s;
+}
 
-    .card{
-        padding:25px;
-        border:1px solid #ddd;
-        border-radius:10px;
-        text-align:center;
-    }
+.card:hover{
+transform:translateY(-5px);
+}
 
-    .contact{
-        text-align:center;
-    }
+.contact{
+text-align:center;
+}
 
-    footer{
-        background:#111;
-        color:white;
-        text-align:center;
-        padding:20px;
-    }
+footer{
+text-align:center;
+padding:20px;
+background:#111827;
+margin-top:40px;
+}
 </style>
 </head>
 <body>
-<header>
-    <h2>Bamijoko</h2>
 <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+<h3>Bamijoko</h3>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
-</header>
-<section class="hero">
-    <h1>Professional Website Designer & Developer</h1>
-<p>
-    I create modern, responsive, and professional websites
-    for businesses, entrepreneurs, and individuals.
-</p>
-
-<a href="#contact" class="btn">Hire Me</a>
-</section>
+<div class="hero">
+<h1>Hi, I'm Bamijoko 👋</h1>
+<p>I build modern websites that help businesses grow online</p>
+<a class="btn" href="https://wa.me/234YOURNUMBER" target="_blank">
+Chat on WhatsApp
+</a>
+</div>
 <section id="about">
-    <h2>About Me</h2>
-<p>
-    Hello, I'm Bamijoko. I help businesses and individuals
-    build beautiful, mobile-friendly websites that attract customers
-    and grow their online presence. My goal is to create websites
-    that look professional and deliver results.
+<h2>About Me</h2>
+<p style="text-align:center;color:#cbd5e1;line-height:1.7;">
+I am a web designer and developer focused on creating modern, responsive websites
+that help businesses attract customers and grow online.
 </p>
 </section>
 <section id="services">
-    <h2>My Services</h2>
-<div class="services">
-
-    <div class="card">
-        <h3>Business Websites</h3>
-        <p>Professional websites for companies, brands, and local businesses.</p>
-    </div>
-
-    <div class="card">
-        <h3>Landing Pages</h3>
-        <p>High-converting landing pages for products and services.</p>
-    </div>
-
-    <div class="card">
-        <h3>Portfolio Websites</h3>
-        <p>Personal portfolio websites for professionals and freelancers.</p>
-    </div>
-
-    <div class="card">
-        <h3>Website Maintenance</h3>
-        <p>Updates, improvements, and ongoing support for your website.</p>
-    </div>
-
+<h2>Services</h2>
+<div class="grid">
+<div class="card">
+<h3>Business Websites</h3>
+<p>Professional websites for companies and brands.</p>
+</div>
+<div class="card">
+<h3>Landing Pages</h3>
+<p>High-converting pages for marketing and sales.</p>
+</div>
+<div class="card">
+<h3>Portfolio Websites</h3>
+<p>Clean personal websites for freelancers.</p>
+</div>
+</div>
+</section>
+<section id="portfolio">
+<h2>Portfolio</h2>
+<div class="grid">
+<div class="card">
+<h3>Business Website</h3>
+<p>Modern responsive design for a local business.</p>
+</div>
+<div class="card">
+<h3>E-commerce Landing Page</h3>
+<p>Product-focused landing page designed for sales.</p>
+</div>
+<div class="card">
+<h3>Personal Portfolio</h3>
+<p>Simple portfolio site for a freelancer.</p>
+</div>
+</div>
+</section>
+<section id="pricing">
+<h2>Pricing</h2>
+<div class="grid">
+<div class="card">
+<h3>Starter</h3>
+<p>$50 - Simple website (1 page)</p>
+</div>
+<div class="card">
+<h3>Pro</h3>
+<p>$120 - Business website (3–5 pages)</p>
+</div>
+<div class="card">
+<h3>Premium</h3>
+<p>$250 - Full website with custom design</p>
+</div>
 </div>
 </section>
 <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-<p>Let's work together on your next project.</p>
-
+<h2>Contact Me</h2>
+<p>Gmail: sundaybamijokoadewale@gmail.com</p>
 <br>
-
-<p>Email:sundaybamijokoadewale@email.com</p>
-<a href="https://wa.me/2349047939243" target="_blank" style="display:inline-block;background:#25D366;color:white;padding:15px 25px;text-decoration:none;border-radius:8px;font-weight:bold;">
-    Chat With Me on WhatsApp
+<a class="btn" href="https://wa.me/2349047939243" target="_blank">
+Send WhatsApp Message
 </a>
 </section>
 <footer>
-    <p>© 2026 Bamijoko. All Rights Reserved.</p>
+© 2026 Bamijoko. All Rights Reserved.
 </footer>
 </body>
 </html>
