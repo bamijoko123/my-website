@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAMIJOKO Agency System</title>
+<title>BAMIJOKO Business Platform</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -15,6 +15,7 @@ background:#070A12;
 color:white;
 }
 
+/* NAV */
 nav{
 display:flex;
 justify-content:space-between;
@@ -22,7 +23,7 @@ padding:18px 50px;
 position:fixed;
 width:100%;
 background:rgba(10,15,30,0.7);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 }
 
 nav a{
@@ -31,19 +32,21 @@ text-decoration:none;
 margin:0 10px;
 }
 
+/* HERO */
 .hero{
 padding:160px 20px;
 text-align:center;
 }
 
 .hero h1{
-font-size:60px;
+font-size:58px;
 }
 
 .hero span{
 color:#3B82F6;
 }
 
+/* BUTTON */
 .btn{
 background:#3B82F6;
 padding:12px 18px;
@@ -54,11 +57,13 @@ display:inline-block;
 margin-top:20px;
 }
 
+/* SECTIONS */
 .section{
 padding:80px 50px;
 text-align:center;
 }
 
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -77,9 +82,20 @@ transition:0.3s;
 transform:translateY(-8px);
 }
 
-.card img{
-width:100%;
-border-radius:10px;
+/* FORM */
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input, textarea{
+padding:12px;
+border-radius:8px;
+border:none;
+outline:none;
 }
 
 /* FLOAT BUTTON */
@@ -90,16 +106,17 @@ right:20px;
 background:#25D366;
 padding:14px;
 border-radius:50px;
-text-decoration:none;
 color:white;
+text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-<div><b>BAMIJOKO</b></div>
+<div><b>BAMIJOKO PLATFORM</b></div>
 <div>
 <a href="#services">Services</a>
 <a href="#work">Work</a>
@@ -107,52 +124,65 @@ color:white;
 </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-<h1>We Build <span>Real Business Systems</span></h1>
-<p>Not just websites — we build conversion machines.</p>
-<a class="btn" href="#work">View Case Studies</a>
+<h1>Build & Manage <span>Your Business Online</span></h1>
+<p>Complete agency system — portfolio, leads, and client management.</p>
+<a class="btn" href="#contact">Get Started</a>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="section">
 <h2>Services</h2>
 
 <div class="grid">
 <div class="card">Web Design</div>
-<div class="card">E-Commerce</div>
-<div class="card">Branding</div>
-<div class="card">SEO</div>
+<div class="card">E-Commerce Systems</div>
+<div class="card">Brand Identity</div>
+<div class="card">SEO Growth</div>
 </div>
 </section>
 
+<!-- WORK -->
 <section id="work" class="section">
-<h2>Case Studies</h2>
+<h2>Projects Database</h2>
 
 <div class="grid">
 
-<a href="projects/hunter.html" class="card">
-<img src="Hunter.jpg">
-<h3>Corporate Website</h3>
+<a class="card" href="projects/hunter.html">
+<img src="Hunter.jpg" style="width:100%; border-radius:10px;">
+<h3>Corporate System</h3>
 </a>
 
-<a href="projects/adewale.html" class="card">
-<img src="Adewale.jpg">
+<a class="card" href="projects/adewale.html">
+<img src="Adewale.jpg" style="width:100%; border-radius:10px;">
 <h3>E-Commerce System</h3>
 </a>
 
-<a href="projects/sunday.html" class="card">
-<img src="Sunday.jpg">
-<h3>Portfolio Build</h3>
+<a class="card" href="projects/sunday.html">
+<img src="Sunday.jpg" style="width:100%; border-radius:10px;">
+<h3>Portfolio System</h3>
 </a>
 
 </div>
 </section>
 
+<!-- CONTACT FORM -->
 <section id="contact" class="section">
-<h2>Contact Us</h2>
-<p>Email: Sundaybamijokoadewale@gmail.com</p>
+<h2>Contact / Lead System</h2>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Your Message"></textarea>
+<button class="btn" type="submit">Send Message</button>
+</form>
+
+<p style="margin-top:20px;">Or email: <b>Sundaybamijokoadewale@gmail.com</b></p>
 </section>
 
-<a class="whatsapp" href="https://wa.me/2349047939243">WhatsApp</a>
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/2349047939243">WA</a>
 
 </body>
 </html>
