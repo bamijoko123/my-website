@@ -4,273 +4,147 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BAMIJOKO Agency</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Inter,sans-serif;
-background:#070A12;
-color:white;
-line-height:1.6;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 20px;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:rgba(10,15,30,0.9);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-.logo{
-font-weight:800;
-font-size:20px;
-}
-
-.nav-links{
-display:flex;
-gap:20px;
-}
-
-.nav-links a{
-color:#A1A1AA;
-text-decoration:none;
-font-size:15px;
-font-weight:600;
-}
-
-.nav-links a:hover{
-color:#3B82F6;
-}
-
-.hero{
-padding:140px 20px 100px;
-text-align:center;
-}
-
-.hero h1{
-font-size:60px;
-font-weight:800;
-margin-bottom:15px;
-}
-
-.hero span{
-color:#3B82F6;
-}
-
-.hero p{
-max-width:600px;
-margin:auto;
-color:#A1A1AA;
-}
-
-.btn{
-background:#3B82F6;
-padding:12px 22px;
-border-radius:10px;
-text-decoration:none;
-color:white;
-display:inline-block;
-margin-top:25px;
-font-weight:600;
-}
-
-.section{
-padding:80px 20px;
-text-align:center;
-}
-
-.section h2{
-font-size:36px;
-margin-bottom:20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-margin-top:30px;
-}
-
-.card{
-background:#111A2E;
-padding:20px;
-border-radius:15px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:10px;
-margin-bottom:15px;
-display:block;
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.card p{
-color:#A1A1AA;
-font-size:14px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px 18px;
-border-radius:50px;
-color:white;
-text-decoration:none;
-font-weight:700;
-z-index:999;
-}
-
-/* Mobile */
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--gold:#D4AF37;--dark:#050505;--card:#111;--text:#e8e8e8}
+body{font-family:Inter,sans-serif;background:var(--dark);color:var(--text);line-height:1.6}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:rgba(0,0,0,.65);backdrop-filter:blur(10px);z-index:1000;transition:.3s}
+nav.scrolled{background:#000;border-bottom:1px solid rgba(212,175,55,.3)}
+.logo{font-weight:800;color:var(--gold);letter-spacing:1px}
+.nav-links{display:flex;gap:18px;flex-wrap:wrap}
+.nav-links a{color:#ddd;text-decoration:none}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 20px;background:radial-gradient(circle at top,rgba(212,175,55,.15),transparent 40%)}
+.hero h1{font-size:clamp(40px,8vw,78px)}
+.hero span{color:var(--gold)}
+.hero p{max-width:700px;margin-top:15px}
+.btn{display:inline-block;margin-top:25px;padding:14px 24px;background:var(--gold);color:#000;text-decoration:none;border-radius:10px;font-weight:700}
+.section{padding:90px 20px;max-width:1200px;margin:auto}
+.section h2{text-align:center;color:var(--gold);margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:var(--card);padding:22px;border-radius:18px;border:1px solid rgba(212,175,55,.15);transition:.35s}
+.card:hover{transform:translateY(-10px);box-shadow:0 0 30px rgba(212,175,55,.25);border-color:var(--gold)}
+.card img{width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:12px}
+.counter{font-size:48px;color:var(--gold);font-weight:800}
+.fade{opacity:0;transform:translateY(40px);transition:.8s}
+.fade.show{opacity:1;transform:none}
+.cta{text-align:center;padding:80px 20px}
+footer{background:#0b0b0b;text-align:center;padding:40px 20px}
+.whatsapp,.topbtn{position:fixed;right:20px;border-radius:50px;text-decoration:none;font-weight:700}
+.whatsapp{bottom:20px;background:#25D366;color:#fff;padding:14px 18px}
+.topbtn{bottom:80px;background:var(--gold);color:#000;padding:12px 16px;display:none}
 @media(max-width:768px){
-
-nav{
-flex-direction:column;
-gap:10px;
-padding:15px;
-}
-
-.nav-links{
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.hero{
-padding-top:160px;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-.section h2{
-font-size:28px;
-}
-
-.card img{
-height:180px;
-}
-
+ nav{flex-direction:column;gap:10px}
+ .hero h1{font-size:42px}
 }
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
+<nav id="navbar">
 <div class="logo">BAMIJOKO AGENCY</div>
-
 <div class="nav-links">
 <a href="#services">Services</a>
 <a href="#work">Work</a>
+<a href="#pricing">Pricing</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-<h1>We Build <span>Modern Websites</span></h1>
-<p>High-quality agency websites that help businesses grow online.</p>
-<a class="btn" href="#work">View Work</a>
+<h1>We Build <span>Premium Digital Experiences</span></h1>
+<p>Luxury web design, business websites, e-commerce stores and portfolios built to help brands grow online.</p>
+<a href="#work" class="btn">View Our Work</a>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section">
+<section id="services" class="section fade">
 <h2>Services</h2>
-
 <div class="grid">
-<div class="card">
-<h3>Web Design</h3>
-<p>Modern, responsive designs tailored for your brand.</p>
-</div>
-
-<div class="card">
-<h3>Web Development</h3>
-<p>Fast, secure, and scalable websites built with clean code.</p>
-</div>
-
-<div class="card">
-<h3>E-Commerce</h3>
-<p>Online stores designed to convert visitors into customers.</p>
-</div>
-
-<div class="card">
-<h3>Branding</h3>
-<p>Professional digital presence that builds trust and credibility.</p>
-</div>
+<div class="card"><h3>Web Design</h3><p>Modern responsive design.</p></div>
+<div class="card"><h3>Web Development</h3><p>Fast and scalable websites.</p></div>
+<div class="card"><h3>E-Commerce</h3><p>Online stores that convert.</p></div>
+<div class="card"><h3>Branding</h3><p>Professional digital identity.</p></div>
 </div>
 </section>
 
-<!-- WORK -->
-<section id="work" class="section">
+<section id="work" class="section fade">
 <h2>Our Work</h2>
-
 <div class="grid">
-
-<div class="card">
-<img src="hunter.jpg" alt="Corporate Website">
-<h3>Corporate Website</h3>
-<p>Professional business website built to establish trust, showcase services, and generate quality leads.</p>
-</div>
-
-<div class="card">
-<img src="adewale.jpg" alt="E-Commerce Website">
-<h3>E-Commerce Website</h3>
-<p>Modern online store with product displays, conversion-focused design, and seamless customer experience.</p>
-</div>
-
-<div class="card">
-<img src="sunday.jpg" alt="Portfolio Website">
-<h3>Portfolio Website</h3>
-<p>Creative portfolio website designed to showcase projects, skills, and attract high-value clients.</p>
-</div>
-
+<div class="card"><img src="hunter.jpg" alt=""><h3>Corporate Website</h3></div>
+<div class="card"><img src="adewale.jpg" alt=""><h3>E‑Commerce Website</h3></div>
+<div class="card"><img src="sunday.jpg" alt=""><h3>Portfolio Website</h3></div>
 </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-<h2>Contact Us</h2>
-
-<p>Email: <strong>Sundaybamijokoadewale@gmail.com</strong></p>
-
-<a class="btn" href="https://wa.me/2349047939243" target="_blank">
-Chat on WhatsApp
-</a>
+<section class="section fade">
+<h2>Our Impact</h2>
+<div class="grid">
+<div class="card"><div class="counter" data-target="25">0</div><p>Projects Completed</p></div>
+<div class="card"><div class="counter" data-target="20">0</div><p>Happy Clients</p></div>
+<div class="card"><div class="counter" data-target="24">0</div><p>Support Availability</p></div>
+</div>
 </section>
 
-<!-- FLOATING WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/2349047939243" target="_blank">
-WA
-</a>
+<section id="pricing" class="section fade">
+<h2>Pricing Plans</h2>
+<div class="grid">
+<div class="card"><h3>Starter Website</h3><h1>$99.59</h1></div>
+<div class="card"><h3>Business Website</h3><h1>$199.59</h1></div>
+<div class="card"><h3>E-Commerce Store</h3><h1>$299.59</h1></div>
+</div>
+</section>
 
+<section class="section fade">
+<h2>Testimonials</h2>
+<div class="grid">
+<div class="card">“Excellent service and professional design.”</div>
+<div class="card">“Highly recommend BAMIJOKO Agency.”</div>
+<div class="card">“Fast delivery and great communication.”</div>
+</div>
+</section>
+
+<section class="cta fade">
+<h2>Ready To Grow Your Business?</h2>
+<p>Let's build a premium website for your brand.</p>
+<a href="https://wa.me/2349047939243" class="btn" target="_blank">Get Started</a>
+</section>
+
+<section id="contact" class="section fade">
+<h2>Contact</h2>
+<p>Email: Sundaybamijokoadewale@gmail.com</p>
+<a class="btn" target="_blank" href="https://wa.me/2349047939243">Chat on WhatsApp</a>
+</section>
+
+<footer>
+<h3>BAMIJOKO Agency</h3>
+<p>Sundaybamijokoadewale@gmail.com</p>
+<p>WhatsApp: +234 904 793 9243</p>
+<p>© 2026 BAMIJOKO Agency. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/2349047939243" target="_blank">WA</a>
+<a class="topbtn" id="topBtn" href="#">↑</a>
+
+<script>
+window.addEventListener('scroll',()=>{
+ document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+ document.getElementById('topBtn').style.display=window.scrollY>300?'block':'none';
+});
+document.querySelectorAll('.fade').forEach(el=>{
+ new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+ }).observe(el);
+});
+document.querySelectorAll('.counter').forEach(counter=>{
+ const target=+counter.dataset.target;
+ let c=0;
+ const tick=()=>{
+  c += Math.max(1,Math.ceil(target/50));
+  if(c<target){counter.textContent=c;requestAnimationFrame(tick);}
+  else counter.textContent=target;
+ };
+ tick();
+});
+</script>
 </body>
 </html>
